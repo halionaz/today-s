@@ -1,0 +1,20 @@
+
+.leftBar{
+    height: 740px;
+    width: 240px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    background-color: #e7ebf0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.logo{
+    margin: 20px;
+    font-size: 30px;
+    color: #2c2c2c;
+    font-weight: lighter;
+    cursor: pointer;
+}

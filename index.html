@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>오늘의</title>
+        <meta charset="utf-8" name="description" content="취향에 맞는 스낵 컬쳐 뉴스 플랫폼">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="leftBar">
+            <div class="logo" id="jsLogo">📅 Today's</div>
+        </div>
+        <div class="content">
+            <div class="control">
+                <div class="settingControl">
+                    <ion-icon class="controlIcon" name="settings" id="jsSetting"></ion-icon>
+                    <ion-icon class="controlIcon" name="notifications" id="jsNotification"></ion-icon>
+                </div>
+                <div class="dayControl">
+                    <ion-icon class="controlIcon" name="arrow-back" id="jsDateBack"></ion-icon>
+                    <div class="date" id="jsDate">
+                        2021.07.24 (SAT)
+                    </div>
+                    <ion-icon class="controlIcon" name="arrow-forward" id="jsDateForward"></ion-icon>
+                </div>
+                <div class="shareControl">
+                    <ion-icon class="controlIcon" name="refresh" id="jsRefresh"></ion-icon>
+                    <ion-icon class="controlIcon" name="share" id="jsShare"></ion-icon>
+                </div>
+            </div>
+            <div class="todayView">
+                <div class="todayWeather todayViewItem">
+                    오늘의 날씨
+                </div>
+                <div class="todayDust todayViewItem">
+                    미세먼지
+                </div>
+            </div>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script src="js/system.js"></script>
+    </body>
+</html>
