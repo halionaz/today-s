@@ -44,8 +44,11 @@ button{
     font-size: 25px;
     color: #2c2c2c;
     cursor: pointer;
+    transition: 0.1s;
 }
-
+.control .controlIcon:hover{
+    transform: scale(1.07);
+}
 .control .controlIcon:active{
     transform: scale(0.85);
 }
@@ -53,4 +56,8 @@ button{
 .control .date{
     font-size: 18px;
     color: #2c2c2c;
+    transition: 0.1s;
+}
+.control .date:hover{
+    transform: scale(1.1);
 }
