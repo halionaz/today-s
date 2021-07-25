@@ -8,7 +8,7 @@ function getToday(){
 }
 
 getToday();
-setInterval(getToday,10000); //날짜 업데이트
+setInterval(getToday,60000); //자동 업데이트, 1분마다 이루어짐
 
 logo.addEventListener("click",()=>{
     location.reload();

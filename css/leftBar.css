@@ -9,6 +9,10 @@
     align-items: center;
     border-radius: 20px;
     margin: 10px;
+    transition: 0.1s;
+}
+.leftBar:hover{
+    transform: scale(1.01);
 }
 
 .logo{
