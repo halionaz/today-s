@@ -30,14 +30,21 @@ button{
 
 .control .settingControl{
     display: flex;
-    width: 65px;
-    justify-content: space-between;
+    align-items: center;
 }
 .control .dayControl{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 200px;
+}
+.control .shareControl{
+    display: flex;
+    align-items: center;
+}
+.settingControl .location{
+    margin: 0px 4px;
+    cursor: pointer;
+    color: #2c2c2c;
+    transition: 0.1s;
 }
 
 .control .controlIcon{
@@ -45,11 +52,12 @@ button{
     color: #2c2c2c;
     cursor: pointer;
     transition: 0.1s;
+    margin: 0px 4px;
 }
-.control .controlIcon:hover{
+.control .controlIcon:hover, .settingControl .location:hover{
     transform: scale(1.07);
 }
-.control .controlIcon:active{
+.control .controlIcon:active, .settingControl .location:active{
     transform: scale(0.85);
 }
 
