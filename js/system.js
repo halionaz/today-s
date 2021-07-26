@@ -1,3 +1,4 @@
+
 const logo = document.querySelector("#jsLogo");
 const date = document.querySelector("#jsDate");
 

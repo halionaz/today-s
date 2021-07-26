@@ -8,7 +8,7 @@
     flex-basis: 0;
     flex-grow: 1;
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-    height: 200px;
+    height: 300px;
     border-radius: 25px;
     padding: 20px;
     margin: 0px 10px;
@@ -17,4 +17,39 @@
 
 .todayView .todayViewItem:hover{
     transform: scale(1.04);
+}
+
+.todayView .todayWeather{
+    display: flex;
+    flex-direction: column;
+}
+
+.todayView .weatherIcon{
+    font-size: 150px;
+    flex: 1 1 0;
+    margin-right: 5%;
+}
+
+.todayWeather .todaySummary{
+    display: flex;
+    align-items: center;
+    flex: 3 1 0;
+}
+
+.todayWeather .commentArea{
+    flex: 2 1 0;
+}
+
+.commentArea .temperature{
+    font-size: 80px;
+}
+.todayWeather .comment{
+    margin-top: 5%;
+    font-size: 15px;
+    color: gray;
+    font-weight: lighter;
+}
+
+.todayWeather .clothesStatus{
+    flex: 1 1 0;
 }
