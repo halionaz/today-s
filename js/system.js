@@ -4,7 +4,7 @@ const date = document.querySelector("#jsDate");
 function getToday(){
     const today = new Date();
     let dayList = ['SUN','MON','TUS','WED','THU','FRI','SAT']
-    date.innerHTML = `${today.getFullYear()}.${today.getMonth()}.${today.getDate()} (${dayList[today.getDay()]})`;
+    date.innerHTML = `${today.getFullYear()}.${today.getMonth()+1}.${today.getDate()} (${dayList[today.getDay()]})`;
 }
 
 getToday();
