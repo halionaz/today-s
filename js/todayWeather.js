@@ -5,9 +5,7 @@ const temperature = document.querySelector('#jsTemper');
 const comment = document.querySelector('#jsComment');
 const locationText = document.querySelector('#jsLocation');
 
-// const weatherIcon = {
-
-// }
+const weatherIconList = ['','sunny','partly-sunny']; 
 
 function getWeather(coords){
     const APILink = `https://api.openweathermap.org/data/2.5/weather?lat=${coords[0]}&lon=${coords[1]}&appid=${APIkey}&lang=kr&units=metric`;
@@ -18,8 +16,11 @@ function getWeather(coords){
         .then(json => {
             const name = json.name;
             const temperNow = json.main.temp;
+            let iconID = json.weather[0].icon;
+            iconID = parseInt(iconID.substring(0,iconID.length - 1));
             locationText.innerHTML = name;
             temperature.innerHTML = temperNow + 'º';
+            weatherIcon.name = weatherIconList[iconID];
         })
 }
 

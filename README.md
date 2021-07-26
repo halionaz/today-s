@@ -12,3 +12,4 @@ https://halionaz.github.io/today-s/
 - [ ] Left Menu
 - [ ] Google Login
 - [ ] Google Analytics
+- [ ] Point Color Setting
