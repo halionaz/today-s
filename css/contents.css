@@ -34,7 +34,7 @@
 .todayWeather .todaySummary{
     display: flex;
     align-items: center;
-    flex: 3 1 0;
+    flex: 2 1 0;
 }
 
 .todayWeather .commentArea{
@@ -46,10 +46,9 @@
 }
 .commentArea .description{
     font-size: 20px;
-    margin-top: 5%;
+    margin: 5% 0;
 }
 .commentArea .comment{
-    margin-top: 5%;
     font-size: 15px;
     color: gray;
     font-weight: lighter;
@@ -57,4 +56,35 @@
 
 .todayWeather .clothesStatus{
     flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.clothesStatus .iconTray{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.iconTray .clothesIcon{
+    font-size: 50px;
+}
+
+.clothesStatus .gage{
+    margin: 10px 0;
+    height: 5px;
+    width: 98%;
+    -webkit-appearance: none;
+    background: linear-gradient(to right, rgb(255, 79, 79), rgb(35, 88, 231));
+    border-radius: 8px;
+}
+.clothesStatus .gage::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: #fa8a2d;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+
 }
