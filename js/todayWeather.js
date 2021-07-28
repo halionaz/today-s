@@ -5,6 +5,10 @@ const temperature = document.querySelector('#jsTemper');
 const description = document.querySelector('#jsDescription');
 const comment = document.querySelector('#jsComment');
 const locationText = document.querySelector('#jsLocation');
+const gage = document.querySelector("#jsGage");
+
+let temperNow;
+let prevTemp = -10;
 
 const weatherList = {
     '01' : ['sunny',`맑은 하늘 공활한데 높고 구름 없이`],
@@ -18,15 +22,47 @@ const weatherList = {
     '50' : ['skull',`공기가 미세먼지로 치환된 수준입니다.`]
 }
 
+
+function displayGage(){
+    if(temperNow != prevTemp){
+        let val = prevTemp;
+        let animateTerm;
+        const dist = Math.abs(prevTemp-temperNow);
+        if(dist > 20){
+            animateTerm = 0.5;
+        } else if (dist > 5){
+            animateTerm = 0.3
+        } else {
+            animateTerm = 0.1
+        }
+        gage.value = prevTemp;
+        const animateSlide = setInterval(()=>{
+            if(Math.abs(val-temperNow) <= animateTerm){
+                gage.value = temperNow;
+                clearInterval(animateSlide);
+            } else if(val > temperNow){
+                val -= animateTerm
+                gage.value = val;
+            } else if(val < temperNow){
+                val += animateTerm
+                gage.value = val;
+            }
+        },1);
+        prevTemp = temperNow;
+    } else {
+        gage.value = temperNow;
+    }
+}
+
+gage.addEventListener('input',displayGage);
+
 function getWeather(coords){
     const APILink = `https://api.openweathermap.org/data/2.5/weather?lat=${coords[0]}&lon=${coords[1]}&appid=${APIkey}&lang=kr&units=metric`;
-    console.log(coords);
-    console.log(APILink);
     fetch(APILink)
         .then(response => response.json())
         .then(json => {
             const name = json.name;
-            const temperNow = json.main.temp.toFixed(1);
+            temperNow = json.main.temp.toFixed(1);
             let iconID = json.weather[0].icon;
             iconID = iconID.substring(0,iconID.length - 1);
             locationText.innerHTML = name;
@@ -34,6 +70,7 @@ function getWeather(coords){
             description.innerHTML = json.weather[0].description;
             weatherIcon.name = weatherList[iconID][0];
             comment.innerHTML = weatherList[iconID][1];
+            displayGage()
         })
 }
 
@@ -59,3 +96,4 @@ function loadWeather(){
 }
 
 loadWeather();
+setInterval(loadWeather,60000);

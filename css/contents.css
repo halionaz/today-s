@@ -78,15 +78,16 @@
     height: 5px;
     width: 98%;
     -webkit-appearance: none;
-    background: linear-gradient(to right, rgb(255, 79, 79), rgb(35, 88, 231));
+    background: linear-gradient(to left, rgb(255, 79, 79), rgb(35, 88, 231));
     border-radius: 8px;
 }
 .clothesStatus .gage::-webkit-slider-thumb{
     -webkit-appearance: none;
-    background-color: #fa8a2d;
-    height: 20px;
-    width: 20px;
-    border-radius: 10px;
+    background-color: transparent;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    border: #fa8a2d solid 5px;
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 
 }
