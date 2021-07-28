@@ -6,6 +6,7 @@ const description = document.querySelector('#jsDescription');
 const comment = document.querySelector('#jsComment');
 const locationText = document.querySelector('#jsLocation');
 const gage = document.querySelector("#jsGage");
+const refresh = document.querySelector("#jsRefresh");
 
 let temperNow;
 let prevTemp = -10;
@@ -96,4 +97,5 @@ function loadWeather(){
 }
 
 loadWeather();
-setInterval(loadWeather,60000);
+setInterval(loadWeather,150000);
+refresh.addEventListener('click',loadWeather);
