@@ -30,15 +30,21 @@ button{
 }
 
 .control .settingControl{
+    flex: 1 1 0;
     display: flex;
+    justify-content: left;
     align-items: center;
 }
 .control .dayControl{
+    flex: 1 1 0;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 .control .shareControl{
+    flex: 1 1 0;
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
 }
 .settingControl .location{
