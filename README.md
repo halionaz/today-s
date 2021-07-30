@@ -6,7 +6,8 @@ https://halionaz.github.io/today-s/
 ### Todo
 - [ ] Working Control Bar
 - [X] Today Weather Area
-- [ ] Today Dust Status Area
+- [X] Today Dust Status Area
+- [ ] Detail View Area
 - [ ] TimeLine
 - [ ] Dark Mode
 - [ ] Left Menu

@@ -42,7 +42,7 @@
     flex: 2 1 0;
 }
 
-.commentArea .temperature{
+.todayWeather .temperature{
     font-size: 80px;
 }
 .commentArea .description{

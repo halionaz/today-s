@@ -17,3 +17,11 @@
     margin-right: 5%;
     color: rgb(150, 28, 28);
 }
+
+.todayDust .commentArea{
+    flex: 2 1 0;
+}
+
+.todayDust .dustVal{
+    font-size: 80px;
+}
