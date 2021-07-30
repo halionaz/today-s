@@ -1,6 +1,7 @@
 @import 'reset.css';
 @import 'leftBar.css';
-@import 'contents.css';
+@import 'todayWeather.css';
+@import 'todayDust.css';
 
 body{
     display: flex;
