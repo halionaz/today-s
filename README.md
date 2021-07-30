@@ -3,7 +3,7 @@ Personalized news delivery
 
 https://halionaz.github.io/today-s/
 
-### Todo
+### Todo (Weather Page)
 - [ ] Working Control Bar
 - [X] Today Weather Area
 - [X] Today Dust Status Area
@@ -14,4 +14,6 @@ https://halionaz.github.io/today-s/
 - [ ] Google Login
 - [ ] Google Analytics
 - [X] Point Color Setting
-- [ ] Personalization
+- [ ] Little AI or Big amount of detail expression
+- [ ] Personalization (Feedback System)
+
