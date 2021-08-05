@@ -10,6 +10,8 @@ const refresh = document.querySelector("#jsRefresh");
 const feelLike = document.querySelector("#jsFeelLike")
 const maxTemp = document.querySelector("#jsMaxTemp");
 const minTemp = document.querySelector("#jsMinTemp");
+const humid = document.querySelector("#jsHumid");
+const wind = document.querySelector("#jsWind");
 
 let temperNow;
 let prevTemp = -10;
@@ -78,6 +80,19 @@ function getWeather(coords){
             minTemp.innerHTML = `최저 ${json.main.temp_min.toFixed(1)}º`;
             weatherIcon.name = weatherList[iconID][0];
             comment.innerHTML = weatherList[iconID][1];
+            humid.innerHTML = `습도 ${json.main.humidity}%`;
+            wind.innerHTML = `바람 ${json.wind.speed.toFixed(1)}m/s`;
+
+            // 시발
+            // const now = new Date();
+            // const dist = now.getTimezoneOffset()*60;
+            // let sunset = new Date((json.sys.sunrise - dist)*1000);
+            // // const sunrise = json.sys.sunrise % (60*60*24) 
+            // // const sunsetHour = Math.floor(sunset/(60*60));
+            // // const sunsetMin = Math.floor(sunset/(60*60))
+            // console.log(dist);
+            // console.log(sunset);
+
             displayGage()
         })
 }

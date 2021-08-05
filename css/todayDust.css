@@ -43,12 +43,25 @@
     font-size: 20px;
     font-weight: 300;
 }
+.todayDetailItem .detailItem_Item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .todayDetailItem .maxTemp{
-    padding-bottom: 8px;
     border-bottom: 0.1px dashed #2c2c2c;
     color: crimson;
 }
 .todayDetailItem .minTemp{
-    padding-top: 8px;
     color: royalblue;
+}
+.todayDetailItem .humid, .todayDetailItem .maxTemp{
+    padding-bottom: 8px;
+
+}
+.todayDetailItem .minTemp, .todayDetailItem .wind{
+    padding-top: 8px;
+
 }
