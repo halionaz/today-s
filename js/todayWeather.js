@@ -8,6 +8,8 @@ const locationText = document.querySelector('#jsLocation');
 const gage = document.querySelector("#jsGage");
 const refresh = document.querySelector("#jsRefresh");
 const feelLike = document.querySelector("#jsFeelLike")
+const maxTemp = document.querySelector("#jsMaxTemp");
+const minTemp = document.querySelector("#jsMinTemp");
 
 let temperNow;
 let prevTemp = -10;
@@ -70,8 +72,10 @@ function getWeather(coords){
             iconID = iconID.substring(0,iconID.length - 1);
             locationText.innerHTML = name;
             temperature.innerHTML = temperNow + 'º';
-            feelLike.innerHTML = `체감온도 ${json.main.feels_like}º`
+            feelLike.innerHTML = `체감온도 ${json.main.feels_like.toFixed(1)}º`
             description.innerHTML = json.weather[0].description;
+            maxTemp.innerHTML = `최고 ${json.main.temp_max.toFixed(1)}º`;
+            minTemp.innerHTML = `최저 ${json.main.temp_min.toFixed(1)}º`;
             weatherIcon.name = weatherList[iconID][0];
             comment.innerHTML = weatherList[iconID][1];
             displayGage()

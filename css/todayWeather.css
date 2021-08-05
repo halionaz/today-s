@@ -34,7 +34,7 @@
 .todayWeather .todaySummary{
     display: flex;
     align-items: center;
-    flex: 2 1 0;
+    flex: 2 2 0;
     border-bottom: 0.1px dashed #2c2c2c;
 }
 
