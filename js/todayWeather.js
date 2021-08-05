@@ -7,6 +7,7 @@ const comment = document.querySelector('#jsComment');
 const locationText = document.querySelector('#jsLocation');
 const gage = document.querySelector("#jsGage");
 const refresh = document.querySelector("#jsRefresh");
+const feelLike = document.querySelector("#jsFeelLike")
 
 let temperNow;
 let prevTemp = -10;
@@ -62,12 +63,14 @@ function getWeather(coords){
     fetch(APILink)
         .then(response => response.json())
         .then(json => {
+            console.log(json);
             const name = json.name;
             temperNow = json.main.temp.toFixed(1);
             let iconID = json.weather[0].icon;
             iconID = iconID.substring(0,iconID.length - 1);
             locationText.innerHTML = name;
             temperature.innerHTML = temperNow + 'º';
+            feelLike.innerHTML = `체감온도 ${json.main.feels_like}º`
             description.innerHTML = json.weather[0].description;
             weatherIcon.name = weatherList[iconID][0];
             comment.innerHTML = weatherList[iconID][1];
